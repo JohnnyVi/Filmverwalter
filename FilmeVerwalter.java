@@ -5,11 +5,34 @@ public class FilmeVerwalter {
         Scanner scanner = new Scanner(System.in);
 
         int maxFilme = 6;
-        String[] regisseur = { "Wachowsky Brothers", "Wachowsky Brothers", "Peter Jackson", "?" };
-        String[] titel = { "Matrix 1", "Matrix 2", "Der Herr der Ringe", "Paddington" };
-        String[] hauptDarsteller = { "Keanu", "Keanu", "Viggo Mortensen", "Ben Wisher" };
-        int[] erscheinungsjahr = { 1999, 2003, 2001, 2017 };
-        int anzahlFilme = 4;
+        String[] titel = new String[maxFilme];
+        String[] regisseur = new String[maxFilme];
+        String[] hauptDarsteller = new String[maxFilme];
+        int[] erscheinungsjahr = new int[maxFilme];
+        int anzahlFilme = 0;
+    
+
+        titel[0] = "Matrix 1";
+        regisseur[0] = "Wachowsky Brothers";
+        hauptDarsteller[0] = "Keanu";
+        erscheinungsjahr[0] = 1999;
+
+        titel[1] = "Matrix 2";
+        regisseur[1] = "Wachowsky Brothers";
+        hauptDarsteller[1] = "Keanu";
+        erscheinungsjahr[1] = 2003;
+
+        titel[2] = "Der Herr der Ringe";
+        regisseur[2] = "Peter Jackson";
+        hauptDarsteller[2] = "Viggo Mortensen";
+        erscheinungsjahr[2] = 2001;
+
+        titel[3] = "Paddington";
+        regisseur[3] = "?";
+        hauptDarsteller[3] = "Ben Wisher";
+        erscheinungsjahr[3] = 2017;
+
+        anzahlFilme = 4;
 
         while (true) {
             System.out.println("Gib den Titel des Films ein (oder 'exit' zum Beenden): ");
@@ -45,7 +68,7 @@ public class FilmeVerwalter {
         System.out.println("Filmesammlung:");
         for (int i = 0; i < anzahlFilme; i++) {
             System.out.println("Titel: " + titel[i] + ", Regisseur: " + regisseur[i] + ", Erscheinungsjahr: " +
-                    erscheinungsjahr[i] + ", Hauptdarsteller" + hauptDarsteller[i]);
+                    erscheinungsjahr[i] + ", Hauptdarsteller: " + hauptDarsteller[i]);
         }
 
         scanner.close();
